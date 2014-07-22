@@ -1,0 +1,24 @@
+功能：对印迹点赞
+请求：postMsgLike
+参数：uid、userKey、version、sn、msgID、rootMsgID、zoneID
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"msgID"=>2341,
+	"rootMsgID"=>2341
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

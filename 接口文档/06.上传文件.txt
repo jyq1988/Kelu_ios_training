@@ -1,0 +1,25 @@
+功能：上传附件
+请求：uploadFile
+参数：uid、userKey、version、sn、fileContent、fileName、mimeType
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=uploadFile
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"fileID"=>14535
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

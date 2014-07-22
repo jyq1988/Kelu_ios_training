@@ -1,0 +1,36 @@
+功能：查询用户信息
+请求：queryUser
+参数：uid、userKey、version、sn、userIDList
+
+说明：userIDList是一个数组，成员之间用半角逗号隔开
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=queryUser
+
+返回结果：
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"users" => array(
+		[0] => array(
+			'id' => 14,
+			'nickname' => 'haha',
+			'gender' => 'male',
+			'avatar' => "http://a.com/avatar.jpg" 
+			'avatarOrginal' => "http://a.com/avatarOrginal.jpg" 
+		),
+		[1] => array(...),
+		[2] => array(...),
+		[3] => array(...)
+	)
+)
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

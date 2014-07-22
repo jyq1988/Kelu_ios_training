@@ -1,0 +1,26 @@
+功能：提交印迹评论
+请求：postMsgReply
+参数：uid、userKey、version、sn、msgID、rootMsgID、zoneID、reply、longitude、latitude
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"replyID" => 14535,
+	"msgID"=>2341,
+	"rootMsgID"=>2341
+)
+
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

@@ -1,0 +1,64 @@
+功能：查询指定区域列表
+请求：querySpecifyZone
+参数：uid、userKey、version、sn、zoneIDList、needVisiter
+
+说明：zongIDList是一个数组，成员之间用半角逗号隔开
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=querySpecifyZone
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"zoneList"=>array(
+		[0] => array(
+			"id" => 15872,
+			"name" => "高端金融中心",
+			"description" => "武汉高端金融人才聚集地",
+			"iconUrl" => "http://a.com/icon.jpg",
+			"namerID" => 102939,
+			"postTime" =>137456242,
+			"x"=>123,
+			"y"=>345,
+			"longitude"=>110.234235,
+			"latitude"=>38.2452034,
+			"widthBegin"=>24000,
+			"widthEnd"=>24900,
+			"heightBegin"=>24000,
+			"heightEnd"=>24900,
+			"province"=>"湖北省",
+			"city"=>"武汉市",
+			"district"=>"江汉区",
+			"address"=>"地址",
+			"visitorCount"=>127,
+			"latestVisitorIDList"=>array(1,7,563,4563,64,5424,4354,35412,2343,685)
+		),
+		[1] => array(..),
+		[2] => array(..),
+		[3] => array(..)
+	),
+	"users" => array(
+		[0] => array(
+			'id' => 14,
+			'nickname' => 'haha',
+			'gender' => 'male',
+			'avatar' => "http://a.com/avatar.jpg" 
+		),
+		[1] => array(...),
+		[2] => array(...),
+		[3] => array(...)
+	)
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

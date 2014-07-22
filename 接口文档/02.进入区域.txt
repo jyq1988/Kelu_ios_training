@@ -1,0 +1,25 @@
+功能：进入区域
+请求：enterZone
+参数：uid、userKey、version、sn、zoneID
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=enterZone
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"zoneID"=>2341
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

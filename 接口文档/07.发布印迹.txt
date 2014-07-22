@@ -1,0 +1,126 @@
+
+功能：发布印迹
+说明：发布印迹分两个步骤
+	1、先通过uploadFile提交附件，服务器保存附件后，返回附件ID
+	2、发布印迹，将服务器返回的附件ID作为参数提交给服务器
+
+请求：postMsg
+参数：uid、userKey、version、sn、zoneID、longitude、latitude、replacedMsgID、replaceNote、texts、imageFileIDList、voiceFileIDList
+
+说明：
+1）texts是一个json字符串，格式（PHP数组描述）：
+array("1"=>"哈哈", "2"=>"OK")
+
+2）imageFileIDList
+array("1"=>17854, "2"=>17858, "3"=>17867, "3"=>17867, "4"=>17869)
+
+3）voiceFileIDList
+array("1"=>array(17854, 12), "2"=>array(17877, 7))
+
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"msgID" => 14535,
+	"zoneID"=>1,
+	"nowTime" => 13756783456L,
+	"messages" => array(
+					[0] => array(
+						'id' => 15872,
+						'rootMsgID' => 15872,
+						'zoneID' => 4,
+						'fatherZoneID' => 5,
+						'rootZoneID' => 5,
+						'authorID' => 14,
+						'replacedMsgAuthorID'=>17,
+						'postTime' => 1405093977,
+						'passedTime' => 0,
+						'leftTime' => 259200,
+						'floatOutDistance' => 0,
+						'floatFromDistance' => 1800,
+						'likeCount' => 0,
+						'replyCount' => 1,
+						'textCount' => 6,
+						'voiceCount' => 4,
+						'imageCount' => 6
+					),
+					[1] => array(..),
+					[2] => array(..),
+					[3] => array(..)
+				),
+	"authors" => array(
+					[0] => array(
+						'id' => 14,
+						'nickname' => 'haha',
+						'gender' => 'male',
+						'avatarNormal' => "http://a.com/avatarNormal.jpg",
+						'avatarOrginal' => "http://a.com/avatarOrginal.jpg" 
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	"zones" => array(
+					[0] => array(
+						'id' => 1,
+						'icon' => "http://a.com/avatar.jpg",
+						'name' => 'jobs',
+						"namerID" => 102939,
+						"postTime" =>137456242,
+						"address"=>"地址"
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	"texts" => array(
+					[0] => array(
+						'id' => 6,
+						'rootMsgID' => 14,
+						'sn' => 1,
+						'content' => 'nadfasdfasdfas'
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	'images' => array(
+					[0] => array(
+						'id' => 7,
+						'rootMsgID' => 1,
+						'sn' => 1,
+						'imageSmall' => "http://a.com/small.jpg"
+						'imageBig' => "http://a.com/big.jpg"
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	'voices' => array(
+					[0] => array(
+						'id' => 4,
+						'sn' => 1,
+						'rootMsgID' => 1,
+						'timeLenInSecond' => 12,
+						'voice' => http://a.com/1.wav
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				)
+)
+
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

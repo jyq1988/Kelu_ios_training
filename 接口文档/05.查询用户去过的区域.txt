@@ -1,0 +1,27 @@
+功能：查询用户去过的区域列表
+请求：queryUserVisitedZone
+参数：uid、userKey、version、sn、peerUid
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=queryUserVisitedZone
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"totalZoneArea"=>162000,
+	"zoneIDList"=>array(1,7,563,4563,64,5424,4354,35412,2343,685)
+	)
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

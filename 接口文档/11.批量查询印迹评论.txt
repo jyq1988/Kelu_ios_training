@@ -1,0 +1,48 @@
+功能：批量查询印迹评论
+请求：getMsgReply
+参数：uid、userKey、version、sn、msgID、rootMsgID、maxReplyID、count
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"isEnd" => true,
+	"msgID"=>1,
+	"rootMsgID"=>1,
+	"replies" => array(
+		[0] => array(
+			'id' => 56435,
+			'rootMsgID' => 15,
+			'authorID' => 14,
+			'content'=>hahahahah,
+			'postTime' => "2014-07-08 11:27:34"
+		),
+		[1] => array(..),
+		[2] => array(..),
+		[3] => array(..)
+	),
+	"authors" => array(
+		[0] => array(
+			'id' => 14,
+			'nickname' => 'haha',
+			'gender' => 'male',
+			'avatarNormal' => "http://a.com/avatarNormal.jpg",
+			'avatarOrginal' => "http://a.com/avatarOrginal.jpg" 
+		),
+		[1] => array(...),
+		[2] => array(...),
+		[3] => array(...)
+	)
+	
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

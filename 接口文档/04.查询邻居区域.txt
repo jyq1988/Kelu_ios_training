@@ -1,0 +1,39 @@
+功能：查询区域的邻居区域列表
+请求：queryNeighbourZone
+参数：uid、userKey、version、sn、centerX、centerY
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=queryNeighbourZone
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"zoneList"=>array(
+		[0] => array(
+			"id" => 15872,
+			"name" => "高端金融中心",
+			"description" => "武汉高端金融人才聚集地",
+			"iconUrl" => "http://a.com/icon.jpg",
+			"namerID" => 102939,
+			"postTime" =>137456242,
+			"x"=>123,
+			"y"=>345,
+			"address"=>"地址"
+		),
+		[1] => array(..),
+		[2] => array(..),
+		[3] => array(..)
+	)
+)
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

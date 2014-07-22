@@ -1,0 +1,114 @@
+
+功能：查询指定印迹列表
+请求：getSpecifyMsgList
+参数：uid、userKey、version、sn、msgIDList
+说明：msgIDList以半角逗号隔开的字符串
+
+http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=getSpecifyMsgList
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"zoneID"=>1,
+	"totalMsgCount"=>100,
+	"maxMsgID" => 1345,
+	"isEnd" => true,
+	"messages" => array(
+					[0] => array(
+						'id' => 15872,
+						'rootMsgID' => 15872,
+						'zoneID' => 4,
+						'fatherZoneID' => 5,
+						'rootZoneID' => 5,
+						'authorID' => 14,
+						'replacedMsgAuthorID'=>17,
+						'postTime' => 1405093977,
+						'passedTime' => 129600,
+						'leftTime' => 129600,
+						'floatOutDistance' => 0,
+						'floatFromDistance' => 1800,
+						'likeCount' => 0,
+						'replyCount' => 1,
+						'textCount' => 6,
+						'voiceCount' => 4,
+						'imageCount' => 6
+					),
+					[1] => array(..),
+					[2] => array(..),
+					[3] => array(..)
+				),
+	"authors" => array(
+					[0] => array(
+						'id' => 14,
+						'nickname' => 'haha',
+						'gender' => 'male',
+						'avatarNormal' => "http://a.com/avatarNormal.jpg",
+						'avatarOrginal' => "http://a.com/avatarOrginal.jpg" 
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	"zones" => array(
+					[0] => array(
+						'id' => 1,
+						'icon' => "http://a.com/avatar.jpg",
+						'name' => 'jobs',
+						"namerID" => 102939,
+						"postTime" =>137456242,
+						"address"=>"地址"
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	"texts" => array(
+					[0] => array(
+						'id' => 6,
+						'rootMsgID' => 14,
+						'sn' => 1,
+						'content' => 'nadfasdfasdfas'
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	'images' => array(
+					[0] => array(
+						'id' => 7,
+						'rootMsgID' => 1,
+						'sn' => 1,
+						'imageSmall' => "http://a.com/small.jpg"
+						'imageBig' => "http://a.com/big.jpg"
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	'voices' => array(
+					[0] => array(
+						'id' => 4,
+						'sn' => 1,
+						'rootMsgID' => 1,
+						'timeLenInSecond' => 12,
+						'voice' => http://a.com/1.wav
+					),
+					[1] => array(...),
+					[2] => array(...),
+					[3] => array(...)
+				),
+	'mylike' => array(1,3,4,7,9)
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)

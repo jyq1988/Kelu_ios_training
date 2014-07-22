@@ -1,0 +1,69 @@
+功能：根据经纬度，定位当前区域
+请求：queryZone
+参数：uid、userKey、version、sn、longitude、latitude、radius
+
+URL:http://kelu.huiian.com/keluServer/index.php?c=keluServer&a=queryZone
+
+返回结果：
+
+成功：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>true,
+	"isNamed"=>true,
+	"zoneWidth"=>900, //区域宽度
+	"zoneHeight"=>900,//区域高度
+	"zoneWidthGap"=>100,//裂缝宽度
+	"zoneHeightGap"=>100,//裂缝高度
+	"coordinateAccuracyLevel"=>5 //定位结果精确等级
+	"zoneList"=>array(
+		[0] => array(
+			"id" => 15872,
+			"name" => "高端金融中心",
+			"description" => "武汉高端金融人才聚集地",
+			"iconUrl" => "http://a.com/icon.jpg",
+			"namerID" => 102939,
+			"postTime" =>137456242,
+			"x"=>123,
+			"y"=>345,
+			"longitude"=>110.234235,
+			"latitude"=>38.2452034,
+			"widthBegin"=>24000,
+			"widthEnd"=>24900,
+			"heightBegin"=>24000,
+			"heightEnd"=>24900,
+			"province"=>"湖北省",
+			"city"=>"武汉市",
+			"district"=>"江汉区",
+			"address"=>"地址",
+			"visitorCount"=>127,
+			"latestVisitorIDList"=>array(1,7,563,4563,64,5424,4354,35412,2343,685)
+		),
+		[1] => array(..),
+		[2] => array(..),
+		[3] => array(..)
+	),
+	"users" => array(
+		[0] => array(
+			'id' => 14,
+			'nickname' => 'haha',
+			'gender' => 'male',
+			'avatarNormal' => "http://a.com/avatarNormal.jpg",
+			'avatarOriginal' => "http://a.com/avatarOriginal.jpg" 
+		),
+		[1] => array(...),
+		[2] => array(...),
+		[3] => array(...)
+	)
+)
+
+
+失败：
+array(
+	"uid"=>1034333,
+	"sn"=>123456,
+	"result"=>false,
+	"errorCode"=>10,
+	"errorMsg"=>"haha"
+)
